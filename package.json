@@ -1,0 +1,23 @@
+{
+  "name": "subs-api-tester",
+  "version": "1.0.0",
+  "description": "A Node.js® application to assert the integrity of the EMB-EBI Submissions API",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fpenim/subs-api-tester.git"
+  },
+  "author": "fpenim",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fpenim/subs-api-tester/issues"
+  },
+  "homepage": "https://github.com/fpenim/subs-api-tester#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "request": "^2.83.0"
+  }
+}
