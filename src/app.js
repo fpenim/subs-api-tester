@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-if(process.env.environment == "test") {
+if(process.env.environment === "test") {
     dotenv.config({path: "./test.env"});
 } else {
     dotenv.config({path: "./dev.env"});
@@ -7,4 +7,12 @@ if(process.env.environment == "test") {
 
 const checkApiHealth = require("./tests/apiHealth");
 
-checkApiHealth();
+const errors = require("./errors");
+
+checkApiHealth(errors);
+
+if(errors.hasErrors) {
+    // TODO - send email
+} else {
+    console.log("No errors to report.")
+}

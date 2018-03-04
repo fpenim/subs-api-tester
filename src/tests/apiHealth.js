@@ -2,13 +2,14 @@ const request = require("request");
 
 const url = process.env.API_ROOT + "/health";
 
-function checkApiHealth() {
+function checkApiHealth(errors) {
 
     request(url, function (error, response, body) {
-       if(error || response.statusCode !== 200) {
-           // TODO
+       if(response.statusCode !== 200) {
+           errors.addError("checkApiHealth: " + body);
+           console.log(errors.errors);
        }
-       console.log(body)
+
     });
 
 }
